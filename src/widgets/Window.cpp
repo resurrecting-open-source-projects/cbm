@@ -14,7 +14,7 @@ Window::~Window() {
 }
 	
 void Window::setPosition(unsigned x, unsigned y) {
-    mvwin((WINDOW*) win_, y, x);
+    mvderwin((WINDOW*) win_, y, x);
 }
 
 void Window::setSize(unsigned width, unsigned height) {

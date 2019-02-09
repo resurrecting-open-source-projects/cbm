@@ -156,13 +156,20 @@ int main(int argc, char **argv) {
 	    interfaceTable.setColumns(4);
 	    interfaceTable.setActiveStyle(A_BOLD);
 	    interfaceTable.setActiveRow(1);
+	    // Position the interface table
+	    interfaceTable.setPosition(2, 2);
+	    interfaceTable.setSize(screen.getWidth() - 4, 
+					       8); // TODO
 
 	    // Create the detail table
 	    VerticalTable detailTable(screen);
 	    detailTable.setColumns(2);
 	    detailTable.setRows(2);
 	    detailTable.setActiveRow(-1);
-	    
+	    // Position the detail table
+	    detailTable.setPosition(2, 12); // TODO
+	    detailTable.setSize(screen.getWidth() - 4, 10); // TODO
+
 	    // Populate the detail table
 	    detailTable.setText (0, 0, "Interface");
 	    detailTable.setStyle(0, 0, COLOR_PAIR(COLOR_HEADING) | A_BOLD);
