@@ -28,6 +28,9 @@ AC_CONFIG_HEADER(src/config.h)
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_CXX
+if test "${GXX}" = ""; then
+    AC_MSG_ERROR([ERROR: we need a C++ compiler, like g++ or other])
+fi
 AC_PROG_LIBTOOL
 AC_CHECK_PROG(HAS_XMLTO, xmlto, yes, no)
 if test x"$HAS_XMLTO" == xno ; then
