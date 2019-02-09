@@ -1,0 +1,18 @@
+cbm - display in real time the network traffic speed
+----------------------------------------------------
+
+The Color Bandwidth Meter (CBM) is a small program to display the traffic
+currently flowing through the network devices in a simple curses-based GUI.
+The traffic for all interfaces include values as receive, transfer and total
+Bytes/s or bits/s (or its multiples as KB/s and Kb/s).
+
+It is useful for Internet or LAN speed tests, measuring the velocity of a
+link, to establish a benchmark or to monitor your connections. CBM can be
+used with virtual, wired or wireless networks.
+
+AUTHOR
+
+cbm was originally developed by Aaron Isotton <aaron@isotton.com> under GPL-2.
+
+Currently, source code and newer versions are available at
+https://github.com/resurrecting-open-source-projects/cbm
