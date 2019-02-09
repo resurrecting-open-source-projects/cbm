@@ -10,7 +10,20 @@ It is useful for Internet or LAN speed tests, measuring the velocity of a
 link, to establish a benchmark or to monitor your connections. CBM can be
 used with virtual, wired or wireless networks.
 
+
+Build
+=====
+
+$ ./autogen.sh
+$ ./configure
+$ make
+# make install
+
+To return to original source code, you can use '$ make distclean' command.
+
+
 AUTHOR
+======
 
 cbm was originally developed by Aaron Isotton <aaron@isotton.com> under GPL-2.
 
