@@ -43,10 +43,12 @@ AC_CANONICAL_HOST
 # Checks for libraries.
 
 # Checks for header files.
+AC_CHECK_HEADER(curses.h,[],[ AC_MSG_ERROR(curses.h not found or too old.) ], [])
 
 # Checks for typedefs, structures, and compiler characteristics.
+
 # Checks for library functions.
-# 
+#
 AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_FILES([Makefile doc/Makefile src/Makefile src/widgets/Makefile])
 AC_OUTPUT
