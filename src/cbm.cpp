@@ -18,6 +18,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <net/if.h>
+#include <unistd.h>
 
 // Externs
 extern int optind, opterr, optopt;
