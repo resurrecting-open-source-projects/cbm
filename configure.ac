@@ -1,6 +1,6 @@
 AC_PREREQ(2.59)
 AC_INIT([cbm],[0.1],[aaron@isotton.com])
-AM_INIT_AUTOMAKE(1.9)
+AM_INIT_AUTOMAKE(foreign)
 AC_CONFIG_SRCDIR(src/cbm.cpp)
 AC_CONFIG_HEADER(src/config.h)
 
@@ -23,4 +23,6 @@ AC_CANONICAL_HOST
 # Checks for typedefs, structures, and compiler characteristics.
 # Checks for library functions.
 # 
-AC_CONFIG_FILES([Makefile doc/Makefile src/Makefile src/widgets/Makefile])AC_OUTPUT
+AC_CONFIG_MACRO_DIRS([m4])
+AC_CONFIG_FILES([Makefile doc/Makefile src/Makefile src/widgets/Makefile])
+AC_OUTPUT

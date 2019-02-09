@@ -1,2 +1,4 @@
 SUBDIRS=doc src
 EXTRA_DIST=COPYING debian/*
+
+ACLOCAL_AMFLAGS = -I m4
