@@ -3,6 +3,7 @@
 
 #include <list>
 #include <string>
+#include <sys/time.h>
 
 namespace statistics {
     
