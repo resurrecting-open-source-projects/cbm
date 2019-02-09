@@ -2,6 +2,7 @@
 #  Color Bandwidth Meter (CBM) - display in real time the network traffic speed
 #
 #  Copyright 2005-2006 Aaron Isotton <aaron@isotton.com>
+#  Copyright 2019      Joao Eriberto Mota Filho <eriberto@eriberto.pro.br>
 #
 #  This program is free software; you can redistribute it and/or
 #  modify it under the terms of the GNU General Public License
@@ -19,7 +20,4 @@
 #
 
 man1_MANS = cbm.1
-EXTRA_DIST = cbm.xml
-MOSTLYCLEANFILES = cbm.1
-cbm.1: cbm.xml
-	xmlto man cbm.xml
+EXTRA_DIST = $(man_MANS)

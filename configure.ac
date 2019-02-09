@@ -32,10 +32,6 @@ if test "${GXX}" = ""; then
     AC_MSG_ERROR([ERROR: we need a C++ compiler, like g++ or other])
 fi
 AC_PROG_LIBTOOL
-AC_CHECK_PROG(HAS_XMLTO, xmlto, yes, no)
-if test x"$HAS_XMLTO" == xno ; then
-    AC_MSG_ERROR([You need xmlto to build the documentation])
-fi
 
 # Check for host platform
 AC_CANONICAL_HOST
