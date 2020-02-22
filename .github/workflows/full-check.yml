@@ -6,11 +6,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v2
     - name: install_dependencies
-      run: sudo apt install libbsd-dev xauth xvfb
+      run: sudo apt install libncurses5-dev
     - name: first_build
       run: |
            ./autogen.sh
@@ -28,5 +28,4 @@ jobs:
     - name: run_program
       run: |
            cbm --version
-           xvfb-run -a cbm &
-           
+
