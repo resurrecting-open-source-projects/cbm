@@ -48,10 +48,13 @@ extern int optind, opterr, optopt;
 namespace {
 
 // Globals
+static const char* optstring = "hV";
+
 struct option longopts[] =
 {
-    { "help",		no_argument,	NULL, 'h' },
-    { "version",	no_argument,	NULL, 'V' }
+    { "help",       no_argument,    NULL, 'h' },
+    { "version",    no_argument,    NULL, 'V' },
+    {  NULL,        0,              NULL,  0  }
 };
 
 volatile bool quit = false;
@@ -117,7 +120,7 @@ int main(int argc, char **argv) {
 	opterr = 0;
 	bool getopt_done = false;
 	while (!getopt_done) {
-	    int ch = getopt_long(argc, argv, "", longopts, NULL);
+	    int ch = getopt_long(argc, argv, optstring, longopts, NULL);
 	    switch (ch) {
 		case 'h':
 		    usage(std::cout);
