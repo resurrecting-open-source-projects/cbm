@@ -1,3 +1,9 @@
+cbm 0.3 - 31 Jan. 2021
+   * Fixed parse command-line options:
+       - Fix Segmentation fault.
+       - Allow to use single character option.
+       - Thanks to daltomi.
+
 cbm 0.2 - 09 Feb. 2019
    * Added autogen.sh.
    * Added licensing headers and set rights in several files.
