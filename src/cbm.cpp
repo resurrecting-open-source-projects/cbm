@@ -4,6 +4,7 @@
   Copyright 2005-2006 Aaron Isotton <aaron@isotton.com>
   Copyright 2006      Paul Martin <pm@debian.org>
   Copyright 2012      Cyril Brulebois <kibi@debian.org>
+  Copyright 2020      daltomi <daltomi@disroot.org>
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
