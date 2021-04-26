@@ -20,7 +20,6 @@ To find issues and bugs to fix, you can check these addresses:
    - https://github.com/resurrecting-open-source-projects/cbm
    - https://bugs.debian.org/cgi-bin/pkgreport.cgi?dist=unstable;package=cbm
    - https://bugs.launchpad.net/ubuntu/+source/cbm/+bugs
-   - https://apps.fedoraproject.org/packages/cbm/bugs
    - https://bugs.gentoo.org/buglist.cgi?quicksearch=cbm
 
 If you want to join, please make a contact.
