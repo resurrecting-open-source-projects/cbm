@@ -14,8 +14,8 @@ later releases). CBM is packaged in Debian[2] Project.
 
 If you are interested to help CBM, read the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
-[1]: http://snapshot.debian.org/package/cbm/
-[2]: https://tracker.debian.org/pkg/cbm
+[1] http://snapshot.debian.org/package/cbm/
+[2] https://tracker.debian.org/pkg/cbm
 
 ## What is CBM? ##
 
