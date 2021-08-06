@@ -1,3 +1,8 @@
+cbm 0.3.1 - 06 Aug. 2021
+   * Created CONTRIBUTING.md.
+   * Renamed README to README.md.
+   * Updated README.md.
+
 cbm 0.3 - 31 Jan. 2021
    * Fixed parse command-line options:
        - Fix Segmentation fault.
