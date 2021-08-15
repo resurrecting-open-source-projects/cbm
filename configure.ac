@@ -19,11 +19,11 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
 
-AC_PREREQ(2.59)
+AC_PREREQ([2.69])
 AC_INIT([cbm],[0.3.1],[https://github.com/resurrecting-open-source-projects/cbm/issues])
 AM_INIT_AUTOMAKE(foreign)
 AC_CONFIG_SRCDIR(src/cbm.cpp)
-AC_CONFIG_HEADER(src/config.h)
+AC_CONFIG_HEADERS([src/config.h])
 
 # Checks for programs.
 AC_PROG_CC
@@ -31,7 +31,7 @@ AC_PROG_CXX
 if test "${GXX}" = ""; then
     AC_MSG_ERROR([ERROR: we need a C++ compiler, like g++ or other])
 fi
-AC_PROG_LIBTOOL
+LT_INIT
 
 # Check for host platform
 AC_CANONICAL_HOST
