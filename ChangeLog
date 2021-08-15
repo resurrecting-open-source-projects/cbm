@@ -1,3 +1,8 @@
+cbm 0.3.2 - 15 Aug. 2021
+   * Fixed warnings from configure.ac.
+   * Ran `astyle' command in all sources.
+   * Updated autoconf level to 2.69.
+
 cbm 0.3.1 - 06 Aug. 2021
    * Created CONTRIBUTING.md.
    * Renamed README to README.md.
