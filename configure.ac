@@ -20,7 +20,7 @@
 #
 
 AC_PREREQ([2.69])
-AC_INIT([cbm],[0.3.1],[https://github.com/resurrecting-open-source-projects/cbm/issues])
+AC_INIT([cbm],[0.3.2],[https://github.com/resurrecting-open-source-projects/cbm/issues])
 AM_INIT_AUTOMAKE(foreign)
 AC_CONFIG_SRCDIR(src/cbm.cpp)
 AC_CONFIG_HEADERS([src/config.h])
