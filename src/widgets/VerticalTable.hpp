@@ -6,35 +6,35 @@
 #include <vector>
 
 class VerticalTable : public Window {
-    public:
-	VerticalTable(Screen& screen);
-	
-	void setColumns(unsigned columns);
-	unsigned getColumns() const;
-	
-	void setRows(unsigned rows);
-	unsigned getRows() const;
-	
-	void setActiveRow(unsigned row);
-	unsigned getActiveRow() const;
-	
-	void setText(unsigned column, unsigned row, const std::string& text);
-	void setStyle(unsigned column, unsigned row, int style);
-	void setActiveStyle(int style);
+public:
+    VerticalTable(Screen& screen);
 
-    protected:	
-	virtual void update() const;
+    void setColumns(unsigned columns);
+    unsigned getColumns() const;
 
-    private:
-	struct Cell {
-	    Cell() : style(0) {}
+    void setRows(unsigned rows);
+    unsigned getRows() const;
 
-	    std::string text;
-	    int style;
-	};
-	unsigned columns_, rows_, activeRow_;
-	int activeStyle_;
-	std::vector<Cell> cells_;
+    void setActiveRow(unsigned row);
+    unsigned getActiveRow() const;
+
+    void setText(unsigned column, unsigned row, const std::string& text);
+    void setStyle(unsigned column, unsigned row, int style);
+    void setActiveStyle(int style);
+
+protected:
+    virtual void update() const;
+
+private:
+    struct Cell {
+        Cell() : style(0) {}
+
+        std::string text;
+        int style;
+    };
+    unsigned columns_, rows_, activeRow_;
+    int activeStyle_;
+    std::vector<Cell> cells_;
 };
 
 #endif

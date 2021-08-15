@@ -37,8 +37,8 @@ void Screen::update() {
 
     // Update the children
     for (Children::const_iterator child = children_.begin();
-	    child != children_.end(); ++child)
-	(*child)->update();
+            child != children_.end(); ++child)
+        (*child)->update();
 
     // Flush the changes
     doupdate();

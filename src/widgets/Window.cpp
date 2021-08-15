@@ -33,7 +33,7 @@ Window::~Window() {
     screen_.removeChild(this);
     delwin((WINDOW*) win_);
 }
-	
+
 void Window::setPosition(unsigned x, unsigned y) {
     mvderwin((WINDOW*) win_, y, x);
 }
@@ -41,7 +41,7 @@ void Window::setPosition(unsigned x, unsigned y) {
 void Window::setSize(unsigned width, unsigned height) {
     wresize((WINDOW*) win_, height, width);
 }
-	
+
 void Window::update() const {
     wnoutrefresh((WINDOW*) win_);
 }

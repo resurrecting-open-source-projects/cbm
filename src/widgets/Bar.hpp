@@ -25,19 +25,19 @@
 #include <string>
 
 class Bar : public Window {
-    public:
-	Bar(Screen& screen);
+public:
+    Bar(Screen& screen);
 
-	void setText(const std::string& text);
-	void setStyle(int style);
-	void setBackground(int background);
+    void setText(const std::string& text);
+    void setStyle(int style);
+    void setBackground(int background);
 
-    protected:
-	virtual void update() const;
+protected:
+    virtual void update() const;
 
-    private:
-	int style_, background_;
-	std::string text_;
+private:
+    int style_, background_;
+    std::string text_;
 };
 
 #endif

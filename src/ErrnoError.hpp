@@ -27,9 +27,9 @@
 #include <string>
 
 class ErrnoError : public std::runtime_error {
-    public:
-	ErrnoError(const std::string& description, int error = errno) 
-	    : std::runtime_error(description + ": " + std::strerror(error)) {}
+public:
+    ErrnoError(const std::string& description, int error = errno)
+        : std::runtime_error(description + ": " + std::strerror(error)) {}
 };
 
 #endif

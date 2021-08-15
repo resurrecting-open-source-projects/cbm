@@ -25,8 +25,8 @@
 #include <string>
 
 class CursesError : public std::runtime_error {
-    public:
-	CursesError(const std::string& description) : std::runtime_error(description) {}
+public:
+    CursesError(const std::string& description) : std::runtime_error(description) {}
 };
 
 #endif

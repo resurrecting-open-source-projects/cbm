@@ -26,26 +26,26 @@
 class Window;
 
 class Screen {
-    public:
-	Screen();
-	~Screen();
-	
-	unsigned getWidth() const;
-	unsigned getHeight() const;
+public:
+    Screen();
+    ~Screen();
 
-	void update();
+    unsigned getWidth() const;
+    unsigned getHeight() const;
 
-    private:
-	Screen(const Screen&);
-	void operator=(const Screen&);
+    void update();
 
-	void addChild(Window* window);
-	void removeChild(Window* window);
-	
-	void* win_;
-	friend class Window;
-	typedef std::set<Window*> Children;
-	Children children_;
+private:
+    Screen(const Screen&);
+    void operator=(const Screen&);
+
+    void addChild(Window* window);
+    void removeChild(Window* window);
+
+    void* win_;
+    friend class Window;
+    typedef std::set<Window*> Children;
+    Children children_;
 };
 
 #endif

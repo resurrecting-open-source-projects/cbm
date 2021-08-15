@@ -1,10 +1,10 @@
 #include "VerticalTable.hpp"
 
-VerticalTable::VerticalTable(Screen& screen) : Window(screen), 
-					       columns_(0), rows_(0),
-					       activeRow_(0),
-					       activeStyle_(0) {}
-	
+VerticalTable::VerticalTable(Screen& screen) : Window(screen),
+    columns_(0), rows_(0),
+    activeRow_(0),
+    activeStyle_(0) {}
+
 void VerticalTable::setColumns(unsigned columns) {
     cells_.resize(columns * rows_);
     columns_ = columns;
@@ -31,8 +31,8 @@ unsigned VerticalTable::getActiveRow() const {
     return activeRow_;
 }
 
-void VerticalTable::setText(unsigned column, unsigned row, 
-	const std::string& text) {
+void VerticalTable::setText(unsigned column, unsigned row,
+                            const std::string& text) {
     cells_[column * rows_ + row].text = text;
 }
 
@@ -48,15 +48,15 @@ void VerticalTable::update() const {
     clear();
 
     for (unsigned row = 0; row < rows_; ++row) {
-	unsigned y = row;
-	for (unsigned column = 0; column < columns_; ++column) {
-	    unsigned x = getWidth() * column / columns_;
-	    int style;
-	    if (row == activeRow_) style = activeStyle_;
-	    else style = cells_[column * rows_ + row].style;
-	    Window::setStyle(style);
-	    putString(x, y, cells_[column * rows_ + row].text);
-	}
+        unsigned y = row;
+        for (unsigned column = 0; column < columns_; ++column) {
+            unsigned x = getWidth() * column / columns_;
+            int style;
+            if (row == activeRow_) style = activeStyle_;
+            else style = cells_[column * rows_ + row].style;
+            Window::setStyle(style);
+            putString(x, y, cells_[column * rows_ + row].text);
+        }
     }
 
     Window::update();
