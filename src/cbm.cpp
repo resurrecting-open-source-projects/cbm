@@ -180,7 +180,7 @@ int main(int argc, char **argv) {
 
             // Create the interface table
             VerticalTable interfaceTable(screen);
-            interfaceTable.setColumns(4);
+            interfaceTable.setColumns(6);
             interfaceTable.setActiveStyle(A_BOLD);
             interfaceTable.setActiveRow(1);
             // Position the interface table
@@ -272,6 +272,14 @@ int main(int argc, char **argv) {
                 interfaceTable.setStyle(3, 0,
                                         COLOR_PAIR(COLOR_HEADING) | A_BOLD);
 
+                interfaceTable.setText (4, 0, "Receive Max");
+                interfaceTable.setStyle(4, 0,
+                                        COLOR_PAIR(COLOR_HEADING) | A_BOLD);
+
+                interfaceTable.setText (5, 0, "Transmit Max");
+                interfaceTable.setStyle(5, 0,
+                                        COLOR_PAIR(COLOR_HEADING) | A_BOLD);
+
                 unsigned index = 1;
                 for (statistics::Reader::Interfaces::const_iterator
                         interface = statisticsReader.getInterfaces().begin();
@@ -295,6 +303,14 @@ int main(int argc, char **argv) {
                                             formatBandwidth(interface->getReceiveSpeed()
                                                             + interface->getTransmitSpeed(), bit_mode));
                     interfaceTable.setStyle(3, index, A_NORMAL);
+
+                    interfaceTable.setText(4, index,
+                                            formatBandwidth(interface->getReceiveMax(), bit_mode));
+                    interfaceTable.setStyle(4, index, A_NORMAL);
+
+                    interfaceTable.setText(5, index,
+                                            formatBandwidth(interface->getTransmitMax(), bit_mode));
+                    interfaceTable.setStyle(5, index, A_NORMAL);
 
                     if (index == interfaceTable.getActiveRow()) {
                         // Get the details for the active interface
