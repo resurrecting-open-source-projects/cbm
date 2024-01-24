@@ -34,7 +34,7 @@
 
 namespace statistics {
 
-Interface::Interface(const std::string& name) : name_(name), updated_(false) {}
+Interface::Interface(const std::string& name) : name_(name), updated_(false), receiveMax_(0.0), transmitMax_(0.0) {}
 
 class InterfaceNameMatchesPredicate {
 public:
@@ -55,6 +55,8 @@ public:
 };
 
 void Interface::update(const Statistics& statistics) {
+    static unsigned int count = 0;
+
     memcpy(statistics_ + 1, statistics_ + 0, sizeof(Statistics));
     memcpy(statistics_, &statistics, sizeof(Statistics));
 
@@ -67,6 +69,18 @@ void Interface::update(const Statistics& statistics) {
 
     receiveSpeed_ = (x1.rx_bytes - x0.rx_bytes) / timeDelta;
     transmitSpeed_ = (x1.tx_bytes - x0.tx_bytes) / timeDelta;
+
+    count++;
+
+    // Waits some iterations before calculating max speeds.
+    // This avoids presenting wrong initial peaks.
+    if (count < 8)
+        return;
+
+    if (receiveSpeed_ > receiveMax_)
+        receiveMax_ = receiveSpeed_;
+    if (transmitSpeed_ > transmitMax_)
+        transmitMax_ = transmitSpeed_;
 
     updated_ = true;
 }
@@ -166,6 +180,14 @@ double Interface::getReceiveSpeed() const {
 
 double Interface::getTransmitSpeed() const {
     return transmitSpeed_;
+}
+
+double Interface::getReceiveMax() const {
+    return receiveMax_;
+}
+
+double Interface::getTransmitMax() const {
+    return transmitMax_;
 }
 
 const Reader::Interfaces& Reader::getInterfaces() const {
