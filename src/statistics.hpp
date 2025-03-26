@@ -49,12 +49,15 @@ public:
 
     double getReceiveSpeed() const;
     double getTransmitSpeed() const;
+    double getReceiveMax() const;
+    double getTransmitMax() const;
 
 private:
     std::string name_;
     bool updated_;
     Statistics statistics_[2];
     double receiveSpeed_, transmitSpeed_;
+    double receiveMax_, transmitMax_;
 };
 
 class Reader {
