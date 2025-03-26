@@ -43,6 +43,11 @@
 #include <net/if.h>
 #include <unistd.h>
 
+// Set the max number of rows (and thus interfaces) to display. The
+// choice of 64 is arbitrary, but less likely to cut off interfaces
+// than the original value of 8.
+#define MAX_ROWS 64
+
 // Externs
 extern int optind, opterr, optopt;
 
@@ -186,7 +191,7 @@ int main(int argc, char **argv) {
             // Position the interface table
             interfaceTable.setPosition(2, 2);
             interfaceTable.setSize(screen.getWidth() - 4,
-                                   8); // TODO
+                                   MAX_ROWS); // TODO
 
             // Create the detail table
             VerticalTable detailTable(screen);
@@ -337,7 +342,7 @@ int main(int argc, char **argv) {
                 // Position the interface table
                 interfaceTable.setPosition(2, 2);
                 interfaceTable.setSize(screen.getWidth() - 4,
-                                       8); // TODO
+                                       MAX_ROWS); // TODO
 
                 // Position the detail table
                 detailTable.setPosition(2, 12); // TODO
