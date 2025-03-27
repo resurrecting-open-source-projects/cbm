@@ -1,3 +1,10 @@
+cbm 0.4 - 26 Mar. 2025
+   * Increased max rows to display from 8 to 64. Thanks to Jason Bowen
+     <jbowen@infinitecactus.com>.
+   * Implemented peak bandwidth statistics. Thanks to David Polverari
+     <david.polverari@gmail.com>.
+   * Removed EXTRA_DIST from Makefile.am.
+
 cbm 0.3.2 - 15 Aug. 2021
    * Fixed warnings from configure.ac.
    * Ran `astyle' command in all sources.
