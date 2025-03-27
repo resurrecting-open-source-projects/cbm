@@ -1,5 +1,6 @@
 When updating, change the following files (if needed):
 
+- Added new copyrights
 - ChangeLog
 - Check for spelling errors in ChangeLog and manpage.
 - Update doc/create-man.sh (DATE, version)
