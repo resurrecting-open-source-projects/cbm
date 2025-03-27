@@ -5,6 +5,8 @@
   Copyright 2006      Paul Martin <pm@debian.org>
   Copyright 2012      Cyril Brulebois <kibi@debian.org>
   Copyright 2020      daltomi <daltomi@disroot.org>
+  Copyright 2023      Jason Bowen <jbowen@infinitecactus.com>
+  Copyright 2024      David Polverari <david.polverari@gmail.com>
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License

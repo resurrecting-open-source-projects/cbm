@@ -3,6 +3,7 @@
 
   Copyright 2005-2006 Aaron Isotton <aaron@isotton.com>
   Copyright 2007      brian m. carlson <sandals@crustytoothpaste.ath.cx>
+  Copyright 2024      David Polverari <david.polverari@gmail.com>
 
   This program is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License
